@@ -1,4 +1,6 @@
-﻿namespace DapperLab;
+﻿using System;
+
+namespace DapperLab;
 
 class Program
 {
