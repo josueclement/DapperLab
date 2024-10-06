@@ -1,10 +1,11 @@
-﻿using System;
-using System.Data;
+﻿using Dapper;
+using DapperLab.Domain;
 using System.Data.Common;
 using System.Data.SQLite;
+using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
-using Dapper;
+using System;
 
 namespace DapperLab;
 
@@ -47,14 +48,7 @@ class Program
     }
 }
 
-public class User
-{
-    public Ulid? Id { get; set; }
-    public string? Name { get; set; }
-    public DateTime? Created { get; set; }
-    public double Age { get; set; }
-    
-}
+
 
 public class StringUlidHandler : SqlMapper.TypeHandler<Ulid>
 {
